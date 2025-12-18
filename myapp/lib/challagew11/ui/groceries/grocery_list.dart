@@ -15,6 +15,10 @@ class GroceryList extends StatefulWidget {
 class _GroceryListState extends State<GroceryList> {
   void onCreate() {
     // TODO-4 - Navigate to the form screen using the Navigator push
+                  Navigator.push(
+                context,
+                MaterialPageRoute<Void>(builder: (context) => const NewItem()),
+              );
   }
 
   @override
@@ -36,10 +40,7 @@ class _GroceryListState extends State<GroceryList> {
         actions: [
           IconButton(
             onPressed: () => {
-              Navigator.push(
-                context,
-                MaterialPageRoute<Void>(builder: (context) => const NewItem()),
-              ),
+              onCreate()
             },
             icon: const Icon(Icons.add),
           ),
